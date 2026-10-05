@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keuangan Mahasiswa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HALAMAN LOGIN -->
+    <div id="loginPage" class="login-page">
+
+        <div class="login-box">
+
+            <h1>Keuangan Mahasiswa</h1>
+
+            <p>Silakan masukkan data mahasiswa</p>
+
+            <label>Nama</label>
+            <input
+                type="text"
+                id="nama"
+                placeholder="Masukkan nama"
+            >
+
+            <label>NIM</label>
+            <input
+                type="text"
+                id="nim"
+                placeholder="Masukkan NIM"
+            >
+
+            <label>Kelas</label>
+            <input
+                type="text"
+                id="kelas"
+                placeholder="Contoh: 1TI01"
+            >
+
+            <button onclick="login()">
+                Masuk
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- HALAMAN DASHBOARD -->
+    <div id="dashboardPage" class="dashboard-page">
+
+        <header>
+
+            <div>
+                <h1>Pengelolaan Keuangan Mahasiswa</h1>
+                <p id="dataMahasiswa"></p>
+            </div>
+
+            <button
+                class="logout-button"
+                onclick="logout()"
+            >
+                Logout
+            </button>
+
+        </header>
+
+
+        <!-- RINGKASAN -->
+        <div class="cards">
+
+            <div class="card">
+                <h3>Uang Masuk</h3>
+                <p id="uangMasuk">Rp0</p>
+            </div>
+
+            <div class="card">
+                <h3>Uang Keluar</h3>
+                <p id="uangKeluar">Rp0</p>
+            </div>
+
+            <div class="card">
+                <h3>Saldo</h3>
+                <p id="saldo">Rp0</p>
+            </div>
+
+        </div>
+
+
+        <!-- TAMBAH TRANSAKSI -->
+        <div class="box">
+
+            <h2>Tambah Transaksi</h2>
+
+            <label>Keterangan</label>
+
+            <input
+                type="text"
+                id="keterangan"
+                placeholder="Contoh: Uang bulanan"
+            >
+
+
+            <label>Jumlah Uang</label>
+
+            <input
+                type="number"
+                id="jumlah"
+                placeholder="Contoh: 500000"
+            >
+
+
+            <label>Jenis Transaksi</label>
+
+            <select id="jenis">
+
+                <option value="masuk">
+                    Uang Masuk
+                </option>
+
+                <option value="keluar">
+                    Uang Keluar
+                </option>
+
+            </select>
+
+
+            <button onclick="tambahTransaksi()">
+                Tambah Transaksi
+            </button>
+
+        </div>
+
+
+        <!-- STATUS -->
+        <div class="box">
+
+            <h2>Status Keuangan</h2>
+
+            <p id="status">
+                Belum ada transaksi
+            </p>
+
+        </div>
+
+
+        <!-- HISTORY -->
+        <div class="box">
+
+            <h2>History Transaksi</h2>
+
+            <div id="history">
+
+                <p>Belum ada transaksi.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
